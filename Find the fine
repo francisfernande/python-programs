@@ -1,0 +1,7 @@
+    total_fine = 0
+
+    for i in range(n):
+        if (date % 2 == 0 and car[i] % 2 != 0) or (date % 2 != 0 and car[i] % 2 == 0):
+            total_fine += fine[i]
+
+    return total_fine
