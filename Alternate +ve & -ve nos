@@ -1,0 +1,18 @@
+
+class Solution:
+    def rearrange(self,arr, n):
+        # code here
+        positive = []
+        negative = []
+        for i in arr:
+            if i >= 0:
+                positive.append(i)
+            else:
+                negative.append(i)
+        arr.clear()        
+        arr[:] = positive[:] #copy al element from postive list to arr list
+        index = 1 # assign index =1
+        
+        for i in negative:
+            arr.insert(index,i) # copy all element from neg to arr list but starts from index = 1 and then second from +2 (alternatively)
+            index += 2
