@@ -1,4 +1,4 @@
-#function for file operation
+###function for file operation
 def count_file(file_path):
     with open('file_path', 'r') as file:
         lines=file.readlines()
@@ -10,3 +10,12 @@ def count_file(file_path):
 file_path = 'example.txt'
 lines,words,characters = count_file(file_path)
 print(f"lines:{lines}, words:{words}, char:{characters}")
+
+###write and read
+with open('example.txt', 'w+') as file:
+    file.write("this is new thing")
+    file.seek(0)
+    content = file.read()
+
+with open('destination.txt', 'w') as destination_file:
+    destination_file.write(content)
