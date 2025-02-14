@@ -1,0 +1,36 @@
+The map() function applies a function to each element of an iterable (list, tuple, etc.)
+
+1️⃣ Square a List of Numbers
+nums = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, nums))
+print(squared)  # Output: [1, 4, 9, 16, 25]
+
+2️⃣ Convert a List of Strings to Uppercase
+words = ["apple", "banana", "cherry"]
+uppercased = list(map(lambda x: x.upper(), words))
+print(uppercased)  # Output: ['APPLE', 'BANANA', 'CHERRY']
+
+3️⃣ Convert a List of Integers to Strings
+numbers = [10, 20, 30]
+strings = list(map(str, numbers))
+print(strings)  # Output: ['10', '20', '30']
+
+4️⃣ Get the Length of Each Word in a List
+words = ["python", "java", "C++"]
+lengths = list(map(lambda x: len(x), words))
+print(lengths)  # Output: [6, 4, 3]
+
+5️⃣ Add Two Lists Element-wise
+a = [1, 2, 3]
+b = [4, 5, 6]
+sum_list = list(map(lambda x, y: x + y, a, b))
+print(sum_list)  # Output: [5, 7, 9]
+
+6️⃣ Convert a List of Temperatures from Celsius to Fahrenheit
+celsius = [0, 10, 20, 30]
+fahrenheit = list(map(lambda c: (c * 9/5) + 32, celsius))
+print(fahrenheit)  # Output: [32.0, 50.0, 68.0, 86.0]
+
+7️⃣ Double th Characters in a String
+chars = list(map(lambda x: x*2, "hello"))
+print("".join(chars))  # Output: "hheelllloo"
